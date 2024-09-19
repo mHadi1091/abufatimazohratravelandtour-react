@@ -1,7 +1,7 @@
 import React from "react";
 
-const Test = () => {
+const ContactUs = () => {
   return <div></div>;
 };
 
-export default Test;
+export default ContactUs;

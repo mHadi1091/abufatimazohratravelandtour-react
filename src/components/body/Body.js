@@ -1,66 +1,32 @@
 import React from "react";
 import "./body.css";
+import PaymentSection from "../../sections/PaymentSection";
+import AboutUs from "../../sections/AboutUs";
+import { Stack } from "@mui/material";
 
 const Body = () => {
+  const Home = {
+    label: "WELCOME TO ABU FATIMA ZOHRA TRAVEL AND TOURS",
+    name: "Specialists in Hajj, umarah tours",
+    detailDes:
+      "عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ لَا تُشَدُّ الرِّحَالُ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِي هَذَا وَالْمَسْجِدِ الْأَقْصَى",
+    ArabicLabel: "Sahih Bukhari 1132",
+  };
+  const AboutUsSec = {
+    name: "About Us",
+    detailDes:
+      "Ready to take the next step? Get in touch with us to plan your journey, and let us handle the details so you can focus on what matters most. Our dedicated team is here to help, whether it's a pilgrimage to Hajj or umarah.",
+  };
   return (
     <div>
       {/* <div id="poster_div"> */}
-      <img id="poster" src="/assets/hero.svg" alt="Kaaba Image" />
+      <img id="poster" src="/assets/kaaba pic 1.svg" alt="Kaaba Image" />
       {/* </div> */}
-      <section id="home" class="content-section">
-        <h1 id="home-head">WELCOME TO ABU FATIMA ZOHRA TRAVEL AND TOURS</h1>
-        <h2 id="home">Specialists in Hajj, umarah tours</h2>
-        <p class="arabic-text">
-          عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ النَّبِيَّ صَلَّى
-          اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ لَا تُشَدُّ الرِّحَالُ إِلَّا إِلَى
-          ثَلَاثَةِ مَسَاجِدَ الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِي هَذَا
-          وَالْمَسْجِدِ الْأَقْصَى
-        </p>
-        <p class="hadith-ref">Sahih Bukhari 1132</p>
-      </section>
-      <section id="about-us" class="content-section">
-        <h2>About Us</h2>
-        {/* <!--<p>We offer exceptional travel and tour services with a deep understanding of our clients’ needs and a passion for making their journeys memorable.</p>--> */}
-        <p class="company-info">
-          At Abu Fatima Zohra Travel and Tours, we understand that each traveler
-          has their unique priorities and needs. We offer exceptional services
-          to ensure your spiritual journeys are enriching and hassle-free.
-          Whether you're embarking on Hajj, Umrah tour, we strive to provide the
-          highest level of care and expertise. Our competitive rates and
-          personalized service are designed to make your travel experience
-          seamless and memorable.
-        </p>
-        <p class="company-info">
-          Ready to take the next step? Get in touch with us to plan your
-          journey, and let us handle the details so you can focus on what
-          matters most. Our dedicated team is here to help, whether it's a
-          pilgrimage to Hajj or umarah.
-        </p>
-      </section>
-      {/* <!-- <section id="contact-us" class="content-section">
-        <h2>Contact Us</h2>
-        <p>Feel free to reach out for any inquiries.</p>
-    </section> -->
-    <!-- <section id="faqs" class="content-section">
-        <h2>Frequently Asked Questions (FAQs)</h2>
-        <p>Answers to common questions about our services.</p>
-    </section> --> */}
-      <section id="packages" class="contact-section">
-        <div class="package-container">
-          <div class="package-box">
-            <h2>Basic Package</h2>
-            <p>This package includes basic features for personal use.</p>
-            <p class="price">$29/month</p>
-            <button>Register Now</button>
-          </div>
-          <div class="package-box">
-            <h2>Premium Package</h2>
-            <p>Best for businesses with advanced features.</p>
-            <p class="price">$59/month</p>
-            <button>Register Now</button>
-          </div>
-        </div>
-      </section>
+      <Stack sx={{ padding: { xs: 5, sm: 10, lg: 20 } }}>
+        <AboutUs data={Home} />
+        <AboutUs data={AboutUsSec} />
+        <PaymentSection />
+      </Stack>
       <section id="routes" class="content-section">
         <h2 id="routes-heading">Routes</h2>
         <table class="routes-table">
@@ -173,12 +139,6 @@ const Body = () => {
               <label for="checkout-date">Check-out Date</label>
               <input type="date" id="checkout-date" name="checkout" required />
             </div>
-            {/* <!-- <div class="elem-group">
-                <input type="date" placeholder="Travel Date">
-            </div> -->
-            <!-- <div class="elem-group">
-                <input type="text" placeholder="Accommodation">
-            </div> --> */}
             <div class="elem-group">
               <label for="adult">Adults</label>
               <input type="number" placeholder="Adult 12+" />
