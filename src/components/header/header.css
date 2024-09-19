@@ -1,0 +1,111 @@
+/* Logo and Company Name */
+#logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#company-logo {
+  height: 40px; /* Adjust the height of the logo */
+  margin-right: 10px; /* Space between logo and company name */
+}
+
+#company-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e1c699; /* Gold */
+  font-family: "Georgia", serif;
+}
+/* Basic Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e2d24; /* Dark olive green background */
+  color: #e1c699; /* Gold text color */
+}
+
+#navigation-bar {
+  background-color: #1b2a23; /* Dark olive green */
+  color: #e1c699; /* Gold text */
+  opacity: 0.9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* z-index: 1000; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+/* the navigation bar color */
+#navigation-bar div {
+  background-color: #1b2a23;
+}
+
+/* Logo Section */
+#logo-container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border-color: #e1c699;
+}
+
+#company-logo {
+  height: 50px;
+  margin-right: 10px; /* Space between logo and company name */
+}
+
+#company-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e1c699; /* Gold */
+}
+
+/* Navigation Buttons */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navi-buttons {
+  color: #e1c699; /* Gold */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navi-buttons:hover {
+  color: #f7dd72; /* Lighter gold on hover */
+}
+
+/* Search Bar */
+#search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#placeholder_search {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #e1c699; /* Gold border */
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text inside input */
+}
+
+#search-button {
+  padding: 10px 12px;
+  background-color: #b9935a; /* Olive-gold button */
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#search-button:hover {
+  background-color: #e1c699; /* Gold on hover */
+}

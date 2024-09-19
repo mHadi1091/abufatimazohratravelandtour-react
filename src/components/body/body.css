@@ -1,0 +1,404 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e2d24; /* Dark olive green background */
+  color: #e1c699; /* Gold for text color */
+  line-height: 1.6;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+/* main content */
+.content-section {
+  padding: 100px 20px;
+  background-color: #e1c699; /* olive-gold background for content */
+  color: #333; /* Dark text color */
+  border-radius: 20px;
+}
+/* .home{
+ text-align: center;
+} */
+#home {
+  text-align: center;
+  justify-content: center;
+}
+.divider {
+  color: #b38333;
+  animation-duration: 2ms;
+}
+
+/* Adjust margins */
+#about-us,
+#contact-us,
+#faqs {
+  margin-top: 60px;
+  text-align: center;
+}
+#faqs {
+  margin-bottom: 100px;
+}
+#placeholder_search {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #e1c699; /* Gold border */
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text inside input */
+}
+
+#search-button {
+  padding: 6px 10px;
+  background-color: #b9935a; /* Olive-gold */
+  color: black; /* Black text */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#search-button:hover {
+  background-color: #e1c699; /* Gold on hover */
+}
+
+/* Poster Image Section */
+#poster_div {
+  /* position: relative; */
+  overflow: hidden;
+  height: 0; /* Set the height to a reasonable size */
+  /* margin-top: 60px; Add space to avoid overlap with fixed navbar */
+  border-radius: 10px;
+}
+
+#poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-out;
+}
+
+/* Package Section */
+.package-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap; /* Makes it responsive */
+}
+
+.package-box {
+  border: 2px solid #b9935a; /* Olive-gold border */
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+  border-radius: 8px;
+  background-color: #1b2a23; /* Darker olive green background */
+  color: #e1c699; /* Gold text */
+  margin-bottom: 20px; /* Add spacing between package boxes */
+}
+
+.package-box h2 {
+  margin-top: 0;
+  color: #f7dd72; /* Lighter gold for headings */
+}
+
+.package-box p {
+  color: #e1c699; /* Gold for text */
+}
+
+.package-box .price {
+  font-size: 24px;
+  color: #f7dd72; /* Lighter gold for price */
+  font-weight: bold;
+}
+
+.package-box button {
+  padding: 10px 20px;
+  background-color: #b9935a; /* Olive-gold for button */
+  color: black; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.package-box button:hover {
+  background-color: #e1c699; /* Gold on hover */
+}
+/* Routes Section */
+#routes-heading {
+  text-align: center;
+}
+.table-container {
+  width: 90%;
+  margin: 40px auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e1c699; /* Gold border */
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #1e2d24; /* Dark olive background */
+  color: #e1c699; /* Gold text */
+  font-size: 1.1rem;
+}
+
+.routes-table th,
+.routes-table td {
+  padding: 15px;
+  border: 1px solid #b9935a; /* Olive-gold border */
+  transition: background-color 0.3s ease;
+}
+
+.routes-table th {
+  background-color: #f7dd72; /* Lighter gold for table headers */
+  color: #1e2d24; /* Dark text for contrast */
+}
+
+.routes-table td {
+  background-color: #1b2a23; /* Dark olive row background */
+}
+
+.routes-table tr:hover td {
+  background-color: #333; /* Darker row on hover */
+}
+/* body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+/* margin: 0;
+    padding: 0; 
+}    */
+/* booking section 1 */
+/* .booking-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e1c699;  Dark olive green background 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #1b2a23;
+}
+
+h6{
+    text-align: center;
+    color: #1b2a23;
+}
+*/
+.elem-group {
+  margin-bottom: 15px;
+  color: #1b2a23;
+}
+
+.elem-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.elem-group input,
+.elem-group select {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+} */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  */
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #0b3d33;  Dark Green Background 
+    display:block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+.booking-section {
+  margin-top: 30px;
+}
+.form-container {
+  background-color: #d3b075; /* Light Gold Background */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.form-container h1 {
+  font-size: 2em;
+  color: #2c2c2c; /* Darker font color for contrast */
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  color: #2c2c2c; /* Consistent font color */
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+input,
+button,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  width: 100%;
+  outline: none;
+}
+
+input,
+select {
+  background-color: white;
+  border: 2px solid #ccc;
+  color: #333;
+}
+
+button {
+  grid-column: span 2;
+  background-color: #4caf50; /* Green Button */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* FAQ Section */
+.faq-container {
+  text-align: center;
+  margin: auto;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #c79842; /* Goldish color */
+  text-align: center;
+  font-family: serif;
+  margin-bottom: 20px;
+}
+
+.faq-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Makes FAQ buttons responsive */
+}
+
+.faq-btn {
+  background-color: #000; /* Black buttons */
+  color: #e1c699; /* Gold text */
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-btn:hover {
+  background-color: #444; /* Darker grey on hover */
+}
+
+.faq-btn::after {
+  content: " \27A1"; /* Unicode for arrow */
+  font-size: 1.1rem;
+  margin-left: 8px;
+}
+
+/* FAQ Section Content */
+.faq-section {
+  width: 80%;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff; /* White background for the FAQ content */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333; /* Dark text */
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  color: #c79842; /* Goldish color for FAQ headings */
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  font-size: 1rem;
+  color: #555; /* Greyish text */
+  line-height: 1.6;
+}
+
+/* Floating Contact Button */
+.contact-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #c79842; /* Goldish button */
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.contact-button a {
+  color: #fff;
+  padding: 15px 30px;
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button a:hover {
+  background-color: #b38333; /* Darker gold on hover */
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #b9935a; /* Olive-gold scrollbar */
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #e1c699; /* Gold scrollbar on hover */
+}

@@ -1,0 +1,171 @@
+#footer {
+  background-color: #1b2a23; /* Dark olive green */
+  color: #e1c699; /* Gold text */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  #footer {
+    background-color: #1b2a23; /* Dark olive green */
+    color: #e1c699; /* Gold text */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logo img {
+    height: 50px; /* Adjust height as needed */
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-link {
+    color: #e1c699; /* Gold */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #f7dd72; /* Lighter gold on hover */
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  /* Social Media Icons */
+  .social-icon {
+    color: #e1c699; /* Gold */
+    font-size: 30px; /* Adjust size as needed */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #f7dd72; /* Lighter gold on hover */
+  }
+
+  .social-icon i {
+    transition: transform 0.3s ease;
+  }
+
+  .social-icon:hover i {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  /* Responsive Design for Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-social {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 50px; /* Adjust height as needed */
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #e1c699; /* Gold */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #f7dd72; /* Lighter gold on hover */
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+/* Social Media Icons */
+.social-icon {
+  color: #e1c699; /* Gold */
+  font-size: 30px; /* Adjust size as needed */
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f7dd72; /* Lighter gold on hover */
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
