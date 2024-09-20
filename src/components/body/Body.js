@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./body.css";
 import PaymentSection from "../../sections/PaymentSection";
 import AboutUs from "../../sections/AboutUs";
+// import TransportSection from "../../components/table/TransportSection";
 import { Stack } from "@mui/material";
+import { CustomInputField, MyForm } from "../bookingform/CustomInputField";
+import Bookingform from "../bookingform/Bookingform";
 
 const Body = () => {
   const Home = {
@@ -25,9 +28,11 @@ const Body = () => {
       <Stack sx={{ padding: { xs: 5, sm: 10, lg: 20 } }}>
         <AboutUs data={Home} />
         <AboutUs data={AboutUsSec} />
-        <PaymentSection />
+        {/* <PaymentSection /> */}
+        {/* <TransportSection /> */}
+        <Bookingform />
       </Stack>
-      <section id="routes" class="content-section">
+      {/* <section id="routes" class="content-section">
         <h2 id="routes-heading">Routes</h2>
         <table class="routes-table">
           <thead>
@@ -78,10 +83,9 @@ const Body = () => {
               <td>---</td>
               <td>750 | 850 | 1100 | 1400</td>
             </tr>
-            {/* <!-- Add more rows here as needed --> */}
           </tbody>
         </table>
-      </section>
+      </section> */}
       {/* <!-- booking section --> */}
       <section class="booking-section">
         <div class="form-container">
