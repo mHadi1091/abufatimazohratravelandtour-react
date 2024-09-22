@@ -23,10 +23,28 @@ const Body = () => {
       "Ready to take the next step? Get in touch with us to plan your journey, and let us handle the details so you can focus on what matters most. Our dedicated team is here to help, whether it's a pilgrimage to Hajj or umarah.",
   };
   return (
+    // <div>
+    //   {/* <div id="poster_div"> */}
+    //   <img id="poster" src="/assets/kaaba pic 1.svg" alt="Kaaba Image" />
+    //   {/* </div> */}
+    //   <Stack
+    //     sx={{
+    //       padding: { xs: 5, sm: 10, lg: 20 },
+    //       spacing: { xs: 4, sm: 6, lg: 8 },
+    //     }}
+    //     spacing={4}
+    //   >
+    //     <AboutUs data={Home} />
+    //     <AboutUs data={AboutUsSec} />
+    //     <PaymentSection />
+    //     <TransportSection />
+    //     <Bookingform />
+    //     <Faqs />
+    //     <ContactUs />
+    //   </Stack>
+    // </div>
     <div>
-      {/* <div id="poster_div"> */}
       <img id="poster" src="/assets/kaaba pic 1.svg" alt="Kaaba Image" />
-      {/* </div> */}
       <Stack
         sx={{
           padding: { xs: 5, sm: 10, lg: 20 },
@@ -34,34 +52,28 @@ const Body = () => {
         }}
         spacing={4}
       >
-        <AboutUs data={Home} />
-        <AboutUs data={AboutUsSec} />
-        <PaymentSection />
-        <TransportSection />
-        <Bookingform />
-        <Faqs />
-        <ContactUs />
+        <div id="home">
+          <AboutUs data={Home} />
+        </div>
+        <div id="about-us">
+          <AboutUs data={AboutUsSec} />
+        </div>
+        <div id="payment">
+          <PaymentSection />
+        </div>
+        <div id="transport">
+          <TransportSection />
+        </div>
+        <div id="booking">
+          <Bookingform />
+        </div>
+        <div id="faqs">
+          <Faqs />
+        </div>
+        <div id="contact-us">
+          <ContactUs />
+        </div>
       </Stack>
-      {/* <!-- Contact Us Section -->
-      <div class="about-us-section">
-        <section id="contact-us" class="content-section">
-           <!-- <div class="about-us-section"> -->
-            <!-- Call to Action --> */}
-      {/* <h2>Contact Us</h2>
-          <p>Feel free to reach out for any inquiries.</p>
-          <a
-            href="mailto:abufatimatravelandtour@gmail.com"
-            class="contact-link"
-          >
-            Contact us today
-          </a>{" "}
-          and begin your journey with us!
-          <!-- Optional Contact Button (floating) -->
-          <div class="contact-button">
-            <a href="mailto:abufatimatravelandtour@gmail.com">Contact Us</a>
-          </div>
-        </section>
-      </div> */}
     </div>
   );
 };

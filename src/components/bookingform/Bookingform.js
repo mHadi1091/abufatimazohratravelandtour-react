@@ -37,9 +37,10 @@ const Bookingform = () => {
       </Grid>
 
       <Grid item>
-        <Typography variant="subtitle1" align="center" sx={{ color: "#555" }}>
+        <hr></hr>
+        {/* <Typography variant="subtitle1" align="center" sx={{ color: "#555" }}>
           Find the world's largest collection of Hajj & Umrah Packages
-        </Typography>
+        </Typography> */}
       </Grid>
       <Grid
         container

@@ -38,29 +38,24 @@ const Header = () => {
           </Grid>
 
           {/* Navigation Links */}
-          <Grid item xs={12} md={4}>
-            <Box display="flex" justifyContent="center">
-              {[
-                { label: "Home", href: "#home" },
-                { label: "About Us", href: "#about-us" },
-                { label: "Packages", href: "#packages" },
-                { label: "FAQs", href: "#faqs" },
-                { label: "Contact Us", href: "#contact-us" },
-              ].map((link, index) => (
-                <Button
-                  key={index}
-                  href={link.href}
-                  sx={{
-                    color: "#c79d43",
-                    marginLeft: 2,
-                    textTransform: "none",
-                    "&:hover": { color: "#c79d43" },
-                  }}
-                >
-                  {link.label}
-                </Button>
-              ))}
-            </Box>
+          <Grid item xs={4}>
+            <nav>
+              <Button href="#home" sx={{ color: "#c79d43" }}>
+                Home
+              </Button>
+              <Button href="#about-us" sx={{ color: "#c79d43" }}>
+                About Us
+              </Button>
+              <Button href="#payment" sx={{ color: "#c79d43" }}>
+                Packages
+              </Button>
+              <Button href="#faqs" sx={{ color: "#c79d43" }}>
+                FAQs
+              </Button>
+              <Button href="#contact-us" sx={{ color: "#c79d43" }}>
+                Contact Us
+              </Button>
+            </nav>
           </Grid>
 
           {/* Search Bar */}
