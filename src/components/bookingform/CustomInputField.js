@@ -13,6 +13,12 @@ export const CustomInputField = ({ value, setValue }) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
+      {/* <TextField
+        label="Name"
+        variant="outlined"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      /> */}
     </Stack>
   );
 };
