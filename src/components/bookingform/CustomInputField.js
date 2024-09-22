@@ -1,24 +1,18 @@
-import { Rowing } from "@mui/icons-material";
+// import { Rowing } from "@mui/icons-material";
 import { Stack, TextField, Typography } from "@mui/material";
-import { useState } from "react";
-import ReactDOM from "react-dom/client";
+// import { useState } from "react";
+// import ReactDOM from "react-dom/client";
 
-export const CustomInputField = ({ value, setValue }) => {
+export const CustomInputField = ({ label, value, setValue }) => {
   return (
     <Stack justifyContent={"center"} alignItems={"center"}>
-      <Typography sx={{ color: "black" }}>Enter your name:</Typography>
+      <Typography sx={{ color: "black" }}>{label}</Typography>
       <TextField
-        label="Name"
+        label={label}
         variant="outlined"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      {/* <TextField
-        label="Name"
-        variant="outlined"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      /> */}
     </Stack>
   );
 };

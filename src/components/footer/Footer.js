@@ -1,83 +1,97 @@
 import React from "react";
-import "./footer.css";
+import { Box, Typography, Link, Grid, IconButton } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+// import SnapchatIcon from "@mui/icons-material/Snapchat";
+// import TikTokIcon from "@mui/icons-material/TikTok";
 
 const Footer = () => {
   return (
-    <div>
-      <div class="footer-content">
-        <div class="footer-logo">
+    <Box component="footer" sx={{ backgroundColor: "#171d00", py: 4, px: 2 }}>
+      {/* Footer Content */}
+      <Grid container justifyContent="center" alignItems="center" spacing={2}>
+        {/* Logo Section */}
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <img
             src="/company-logo/abu-fatima-zohra-logo.svg"
             alt="Company Logo"
-            id="footer-logo"
+            style={{ maxWidth: "150px", height: "auto" }}
           />
-        </div>
-        <div class="footer-links">
-          <a href="#about-us" class="footer-link">
-            About Us
-          </a>
-          <a href="#contact-us" class="footer-link">
-            Contact Us
-          </a>
-          <a href="#faqs" class="footer-link">
-            FAQs
-          </a>
-          <a href="#packages" class="footer-link">
-            Packages
-          </a>
-        </div>
-        <div class="footer-social">
-          <a
-            href="https://www.facebook.com/profile.php?id=61564670262881"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/abufatimazohratravelandtour/"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abufatimazohar-travelandtours-908837327/"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/@abufatimazohratravelandtour"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a
-            href="https://www.snapchat.com"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-snapchat-ghost"></i>
-          </a>
-          <a
-            href="https://www.tiktok.com/@abufatimazohratravels?lang=en"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-tiktok"></i>
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Fatima Zohra Travel and Tours. All rights reserved.</p>
-      </div>
-    </div>
+        </Grid>
+
+        {/* Links Section */}
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+          <Box>
+            {["About Us", "Contact Us", "FAQs", "Packages"].map(
+              (text, index) => (
+                <Link
+                  key={index}
+                  href={`#${text.toLowerCase().replace(/\s+/g, "-")}`}
+                  underline="hover"
+                  sx={{
+                    color: "#c79d43",
+                    mx: 2,
+                    fontSize: "1rem",
+                    fontWeight: "bold",
+                    "&:hover": { color: "#333" },
+                  }}
+                >
+                  {text}
+                </Link>
+              )
+            )}
+          </Box>
+        </Grid>
+
+        {/* Social Media Icons Section */}
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+          {[
+            {
+              href: "https://www.facebook.com/profile.php?id=61564670262881",
+              icon: <FacebookIcon />,
+            },
+            { href: "https://twitter.com", icon: <TwitterIcon /> },
+            {
+              href: "https://www.instagram.com/abufatimazohratravelandtour/",
+              icon: <InstagramIcon />,
+            },
+            {
+              href: "https://www.linkedin.com/in/abufatimazohar-travelandtours-908837327/",
+              icon: <LinkedInIcon />,
+            },
+            {
+              href: "https://www.youtube.com/@abufatimazohratravelandtour",
+              icon: <YouTubeIcon />,
+            },
+            // { href: "https://www.snapchat.com", icon: <SnapchatIcon /> },
+            // {
+            //   href: "https://www.tiktok.com/@abufatimazohratravels?lang=en",
+            //   icon: <TikTokIcon />,
+            // },
+          ].map((social, index) => (
+            <IconButton
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "#c79d43", mx: 1 }}
+            >
+              {social.icon}
+            </IconButton>
+          ))}
+        </Grid>
+      </Grid>
+
+      {/* Footer Bottom */}
+      <Box sx={{ textAlign: "center", mt: 3 }}>
+        <Typography sx={{ color: "#333" }}>
+          &copy; 2024 Abu Fatima Zohra Travel and Tours. All rights reserved.
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 
