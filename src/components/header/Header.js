@@ -80,12 +80,12 @@ const Header = () => {
                 sx={{
                   backgroundColor: "#c79d43",
                   color: "#fff",
-                  width: "auto", // Adjust width dynamically
+                  width: "auto",
                   height: "40px", // Set the overall height to 5px
                   fontSize: "20px", // Smaller font to match the button size
                   lineHeight: "5px", // Adjust line height for the small button
                   padding: "2", // Remove padding to avoid increasing size
-                  minWidth: "5px", // Ensure the button can shrink to a small size
+                  minWidth: "5px",
                   "&:hover": {
                     backgroundColor: "#b08835",
                   },

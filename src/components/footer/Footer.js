@@ -21,8 +21,6 @@ const Footer = () => {
             style={{ maxWidth: "150px", height: "auto" }}
           />
         </Grid>
-
-        {/* Links Section */}
         <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <Box>
             {["About Us", "Contact Us", "FAQs", "Packages"].map(

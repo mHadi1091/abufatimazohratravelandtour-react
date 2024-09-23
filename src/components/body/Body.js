@@ -23,28 +23,12 @@ const Body = () => {
       "Ready to take the next step? Get in touch with us to plan your journey, and let us handle the details so you can focus on what matters most. Our dedicated team is here to help, whether it's a pilgrimage to Hajj or umarah.",
   };
   return (
-    // <div>
-    //   {/* <div id="poster_div"> */}
-    //   <img id="poster" src="/assets/kaaba pic 1.svg" alt="Kaaba Image" />
-    //   {/* </div> */}
-    //   <Stack
-    //     sx={{
-    //       padding: { xs: 5, sm: 10, lg: 20 },
-    //       spacing: { xs: 4, sm: 6, lg: 8 },
-    //     }}
-    //     spacing={4}
-    //   >
-    //     <AboutUs data={Home} />
-    //     <AboutUs data={AboutUsSec} />
-    //     <PaymentSection />
-    //     <TransportSection />
-    //     <Bookingform />
-    //     <Faqs />
-    //     <ContactUs />
-    //   </Stack>
-    // </div>
     <div>
-      <img id="poster" src="/assets/kaaba pic 1.svg" alt="Kaaba Image" />
+      <img
+        id="poster"
+        src="/assets/herosize_kaaba_image.svg"
+        alt="Kaaba Image"
+      />
       <Stack
         sx={{
           padding: { xs: 5, sm: 10, lg: 20 },
