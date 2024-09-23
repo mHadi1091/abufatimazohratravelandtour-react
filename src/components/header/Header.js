@@ -25,7 +25,7 @@ const Header = () => {
               <img
                 src="/company-logo/abu-fatima-zohra-logo.svg"
                 alt="Company Logo"
-                style={{ maxWidth: "100px", marginRight: "10px" }}
+                style={{ maxWidth: "150px", marginRight: "10px" }}
               />
               <Typography
                 variant="h6"
