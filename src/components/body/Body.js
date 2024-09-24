@@ -8,6 +8,9 @@ import { Stack } from "@mui/material";
 import Bookingform from "../bookingform/Bookingform";
 import Faqs from "../../sections/Faqs";
 import ContactUs from "../../sections/ContactUs";
+import HeroSlider from "../images slider/ImageSlider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Body = () => {
   const [showModal, setShowModal] = useState(false);
@@ -41,11 +44,10 @@ const Body = () => {
   };
   return (
     <div>
-      <img
-        id="poster"
-        src="/assets/herosize_kaaba_image.svg"
-        alt="Kaaba Image"
-      />
+      <div>
+        <HeroSlider />
+        {/* Other components */}
+      </div>
       <Stack
         sx={{
           padding: { xs: 5, sm: 10, lg: 20 },

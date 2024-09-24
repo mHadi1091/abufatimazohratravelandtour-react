@@ -2,21 +2,16 @@ import React from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
+  // Typography,
   Grid,
   Button,
-  IconButton,
   InputBase,
   Box,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 
 const Header = () => {
   return (
-    <AppBar
-      position="static"
-      sx={{ backgroundColor: "#171d00", color: "#333" }}
-    >
+    <AppBar position="fixed" sx={{ backgroundColor: "#171d00", color: "#333" }}>
       <Toolbar>
         <Grid container alignItems="center" spacing={2}>
           {/* Logo and Company Name */}
@@ -27,13 +22,13 @@ const Header = () => {
                 alt="Company Logo"
                 style={{ maxWidth: "150px", marginRight: "10px" }}
               />
-              <Typography
+              {/* <Typography
                 variant="h6"
                 component="span"
                 sx={{ color: "#c79d43", fontWeight: "bold" }}
               >
                 Abu Fatima Zohra Travel and Tours
-              </Typography>
+              </Typography> */}
             </Box>
           </Grid>
 
@@ -73,7 +68,7 @@ const Header = () => {
                 }}
               />
               {/* <IconButton sx={{ color: "#333" }}>
-                <SearchIcon />
+               
               </IconButton> */}{" "}
               <Button
                 variant="contained"
