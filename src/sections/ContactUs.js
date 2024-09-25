@@ -63,18 +63,19 @@ const ContactUs = () => {
         {[
           {
             icon: <PlaceIcon fontSize="large" />,
-            text: "65b Palmerston Road, London E17 6PR",
+            text: "Ibn Salim Street , Building No:17 , Ground Floor Office No: 01 , Jeddah Azizia , Saudia Arabia",
             link: "https://www.google.com/maps?q=65b+Palmerston+Road,+London+E17+6PR", // Example link
           },
           {
             icon: <EmailIcon fontSize="large" />,
             text: "info@abufatimatravel.com",
-            link: "mailto:abufatimatravelandtour@gmail.com",
+            link: "mailto:abu.fatima.travel@gmail.com",
           },
           {
             icon: <PhoneIcon fontSize="large" />,
-            text: "+44 020 8004 6786",
-            link: "tel:+4402080046786",
+            text: "+966-596314238 , +966-504507210",
+            link: "tel: +966-596314238",
+            link: "tel: +966-504507210",
           },
         ].map((item, index) => (
           <Box display="flex" alignItems="center" sx={{ mb: 2 }} key={index}>

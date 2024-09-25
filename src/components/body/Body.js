@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Modal from "../../Modal";
+// import Modal from "../../Modal";
 import "./body.css";
 import PaymentSection from "../../sections/PaymentSection";
 import AboutUs from "../../sections/AboutUs";
@@ -148,7 +148,7 @@ const Body = () => {
           </Box>
         </Zoom>
       </Stack>
-      <Modal showModal={showModal} handleClose={handleCloseModal} />
+      {/* <Modal showModal={showModal} handleClose={handleCloseModal} /> */}
     </div>
   );
 };
