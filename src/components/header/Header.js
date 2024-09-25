@@ -1,15 +1,14 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  // Typography,
-  Grid,
-  Button,
-  InputBase,
-  Box,
-} from "@mui/material";
+import { AppBar, Toolbar, Grid, Button, Box } from "@mui/material";
 
 const Header = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // This makes the scroll smooth
+    });
+  };
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#171d00", color: "#333" }}>
       <Toolbar>
@@ -18,27 +17,25 @@ const Header = () => {
           <Grid item xs={12} md={4}>
             <Box display="flex" alignItems="center">
               <img
+                onClick={scrollToTop} // Scroll to top when clicked
                 src="/company-logo/abu-fatima-zohra-logo.svg"
                 alt="Company Logo"
-                style={{ maxWidth: "150px", marginRight: "10px" }}
+                style={{
+                  maxWidth: "150px",
+                  marginRight: "10px",
+                  cursor: "pointer",
+                }}
               />
-              {/* <Typography
-                variant="h6"
-                component="span"
-                sx={{ color: "#c79d43", fontWeight: "bold" }}
-              >
-                Abu Fatima Zohra Travel and Tours
-              </Typography> */}
             </Box>
           </Grid>
 
           {/* Navigation Links */}
           <Grid item xs={4}>
             <nav>
-              <Button href="#home" sx={{ color: "#c79d43" }}>
+              <Button onClick={scrollToTop} href="#" sx={{ color: "#c79d43" }}>
                 Home
               </Button>
-              <Button href="#about-us" sx={{ color: "#c79d43" }}>
+              <Button href="#home" sx={{ color: "#c79d43" }}>
                 About Us
               </Button>
               <Button href="#payment" sx={{ color: "#c79d43" }}>
@@ -51,44 +48,6 @@ const Header = () => {
                 Contact Us
               </Button>
             </nav>
-          </Grid>
-
-          {/* Search Bar */}
-          <Grid item xs={12} md={4}>
-            <Box display="flex" justifyContent="flex-end">
-              <InputBase
-                placeholder="Search..."
-                sx={{
-                  border: "1px solid #ccc",
-                  padding: "5px 10px",
-                  borderRadius: "4px",
-                  marginRight: "8px",
-                  width: "200px",
-                  color: "#a0ae77",
-                }}
-              />
-              {/* <IconButton sx={{ color: "#333" }}>
-               
-              </IconButton> */}{" "}
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#c79d43",
-                  color: "#fff",
-                  width: "auto",
-                  height: "40px", // Set the overall height to 5px
-                  fontSize: "20px", // Smaller font to match the button size
-                  lineHeight: "5px", // Adjust line height for the small button
-                  padding: "2", // Remove padding to avoid increasing size
-                  minWidth: "5px",
-                  "&:hover": {
-                    backgroundColor: "#b08835",
-                  },
-                }}
-              >
-                🔍
-              </Button>
-            </Box>
           </Grid>
         </Grid>
       </Toolbar>

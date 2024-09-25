@@ -402,3 +402,21 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #e1c699; /* Gold scrollbar on hover */
 }
+/* .animate-visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Adjust the duration here if needed */
+/* } */
+
+/* Optionally, add styles for the hidden state */
+/* .motion-div {
+  opacity: 0; Start with hidden state
+}  */
+.animate-visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Adjust the duration here if needed */
+}
+
+.motion-div {
+  opacity: 0; /* Start with hidden state */
+  transition: opacity 0.5s ease-in-out; /* Quick transition for hidden state */
+}

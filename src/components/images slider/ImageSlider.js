@@ -1,83 +1,23 @@
-// import React from "react";
-// import Slider from "react-slick";
-// import { Box, Typography } from "@mui/material";
-// import hero1 from "./heheh/herosize_kaaba_image.svg";
-// import hero2 from "./heheh/kaaba pic 1.svg";
-// import hero3 from "./heheh/kaaba3.svg";
-// import hero4 from "./heheh/clock-tower.svg";
-
-// const images = [hero1, hero2, hero3, hero4];
-
-// const HeroSlider = () => {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 3000,
-//   };
-
-//   return (
-//     <Box
-//       sx={{
-//         position: "relative",
-//         height: "800px",
-//         overflow: "hidden",
-//       }}
-//     >
-//       <Slider {...settings}>
-//         {images.map((image, index) => (
-//           <Box
-//             key={index}
-//             component="img"
-//             src={image}
-//             alt={`Hero Image ${index + 1}`}
-//             sx={{
-//               height: "800px",
-//               width: "1600px",
-//               objectFit: "cover",
-//               display: "block",
-//               overlay: "0.5",
-//             }}
-//           />
-//         ))}
-//       </Slider>
-//       <Box
-//         sx={{
-//           position: "absolute",
-//           top: "40%",
-//           left: "50%",
-//           transform: "translateX(-50%)",
-//           textAlign: "center",
-//           color: "white",
-//         }}
-//       >
-//         <Typography variant="h2" component="div">
-//           Welcome to Abu Fatima Zohra Travel and Tours
-//         </Typography>
-//         <Typography variant="h6" component="div">
-//           Explore Our Packages
-//         </Typography>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default HeroSlider;
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Box, Typography } from "@mui/material";
-import hero1 from "./heheh/herosize_kaaba_image.svg";
+import hero1 from "./heheh/4.svg";
 import hero2 from "./heheh/1.svg";
 import hero3 from "./heheh/2.svg";
-import hero4 from "./heheh/3.svg";
-import hero5 from "./heheh/4.svg";
 
-const images = [hero1, hero2, hero3, hero4, hero5];
+const images = [hero1, hero2, hero3];
 
 const HeroSlider = () => {
+  const [zoomIn, setZoomIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setZoomIn(true);
+    }, 3000); // 2 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -85,7 +25,7 @@ const HeroSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
   };
 
   return (
@@ -103,7 +43,7 @@ const HeroSlider = () => {
             sx={{
               position: "relative",
               height: "800px",
-              width: "1600px",
+              width: "100%",
               overflow: "hidden",
             }}
           >
@@ -113,7 +53,7 @@ const HeroSlider = () => {
               alt={`Hero Image ${index + 1}`}
               sx={{
                 height: "800px",
-                width: "1600px",
+                width: "100%",
                 objectFit: "cover",
                 display: "block",
               }}
@@ -137,15 +77,19 @@ const HeroSlider = () => {
       <Box
         sx={{
           position: "absolute",
-          top: "40%",
+          top: "50%",
           left: "50%",
           transform: "translateX(-50%)",
           textAlign: "center",
           color: "white",
           zIndex: 2, // Ensure text is above the overlay
+          transition: "transform 0.5s ease", // Transition for smooth zoom effect
+          transform: zoomIn
+            ? "translate(-50%, -50%) scale(1.5)"
+            : "translate(-50%, -50%) scale(1)", // Increased scale for more zoom
         }}
       >
-        <Typography variant="h2" component="div">
+        <Typography variant="h3" component="div">
           Welcome to <br></br>{" "}
           <span style={{ fontWeight: "bold", color: "gold" }}>
             Abu Fatima Zohra

@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out; /* Fade in effect for overlay */
 }
 
 .modal-content {
@@ -22,6 +23,10 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  animation: popup 0.4s ease-in-out; /* Popup animation */
+  transform: scale(0.7);
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .modal-close {
@@ -77,4 +82,34 @@ label {
   cursor: pointer;
   font-size: 14px;
   text-decoration: underline;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Optional for fade-out effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

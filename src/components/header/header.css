@@ -109,3 +109,29 @@ nav {
 #search-button:hover {
   background-color: #e1c699; /* Gold on hover */
 }
+.nav-button {
+  position: relative;
+  color: #c79d43; /* Same as the button text color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.nav-button:hover {
+  color: #c79d43; /* Match the button text color */
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust distance from text */
+  height: 2px; /* Underline thickness */
+  width: 100%;
+  background-color: #c79d43; /* Same color as button text */
+  transform: scaleX(0); /* Hide the underline initially */
+  transition: transform 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-button:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
