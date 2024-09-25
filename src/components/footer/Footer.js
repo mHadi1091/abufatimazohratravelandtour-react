@@ -1,12 +1,9 @@
 import React from "react";
-import { Box, Typography, Link, Grid, IconButton } from "@mui/material";
+import { Box, Grid, Link, Typography, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-// import SnapchatIcon from "@mui/icons-material/Snapchat";
-// import TikTokIcon from "@mui/icons-material/TikTok";
 
 const Footer = () => {
   return (
@@ -21,26 +18,31 @@ const Footer = () => {
             style={{ maxWidth: "150px", height: "auto" }}
           />
         </Grid>
+
+        {/* Links to sections */}
         <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <Box>
-            {["About Us", "Contact Us", "FAQs", "Packages"].map(
-              (text, index) => (
-                <Link
-                  key={index}
-                  href={`#${text.toLowerCase().replace(/\s+/g, "-")}`}
-                  underline="hover"
-                  sx={{
-                    color: "#c79d43",
-                    mx: 2,
-                    fontSize: "1rem",
-                    fontWeight: "bold",
-                    "&:hover": { color: "#333" },
-                  }}
-                >
-                  {text}
-                </Link>
-              )
-            )}
+            {[
+              { text: "About Us", href: "#home" },
+              { text: "Contact Us", href: "#contact-us" },
+              { text: "FAQs", href: "#faqs" },
+              { text: "Packages", href: "#payment" },
+            ].map(({ text, href }, index) => (
+              <Link
+                key={index}
+                href={href} // href corresponds to section IDs in Body component
+                underline="hover"
+                sx={{
+                  color: "#c79d43",
+                  mx: 2,
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  "&:hover": { color: "#333" },
+                }}
+              >
+                {text}
+              </Link>
+            ))}
           </Box>
         </Grid>
 
@@ -51,7 +53,6 @@ const Footer = () => {
               href: "https://www.facebook.com/profile.php?id=61564670262881",
               icon: <FacebookIcon />,
             },
-            { href: "https://twitter.com", icon: <TwitterIcon /> },
             {
               href: "https://www.instagram.com/abufatimazohratravelandtour/",
               icon: <InstagramIcon />,
@@ -64,11 +65,6 @@ const Footer = () => {
               href: "https://www.youtube.com/@abufatimazohratravelandtour",
               icon: <YouTubeIcon />,
             },
-            // { href: "https://www.snapchat.com", icon: <SnapchatIcon /> },
-            // {
-            //   href: "https://www.tiktok.com/@abufatimazohratravels?lang=en",
-            //   icon: <TikTokIcon />,
-            // },
           ].map((social, index) => (
             <IconButton
               key={index}
