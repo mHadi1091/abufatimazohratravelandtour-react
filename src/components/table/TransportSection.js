@@ -226,7 +226,7 @@ export default function ExpandableTable() {
                 sx={{
                   minWidth: 650,
                   bgcolor: "#e1c699", // Keep table background as the light gold color
-                  borderRadius: "8px", // Rounded corners inside the accordion
+                  borderRadius: "10px", // Rounded corners inside the accordion
                   margin: "0", // Remove margin
                 }}
                 aria-label="transport table"
