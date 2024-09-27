@@ -48,8 +48,8 @@
 // };
 // export default PaymentSection;
 import React from "react";
-import { Grid } from "@mui/material";
-import PaymentCards from "../components/card/PaymentCards";
+import { Grid, Typography } from "@mui/material";
+import PaymentCards from "../components/card/PaymentCards"; // Ensure the path is correct
 
 const PaymentSection = () => {
   const packagesData = [
@@ -58,21 +58,21 @@ const PaymentSection = () => {
       des: "This package includes basic features for personal use.",
       price: "$29/month",
       btnTxt: "Register Now",
-      imgSrc: "/assets/1.svg", // Updated path to public folder
+      imgSrc: "/assets/1.svg", // Corrected image path
     },
     {
       name: "Hajj Packages",
       des: "Best for businesses with advanced features.",
       price: "$35/month",
       btnTxt: "Register Now",
-      imgSrc: "/assets/2.svg", // Updated path to public folder
+      imgSrc: "/assets/2.svg", // Corrected image path
     },
     {
       name: "Off-Season Packages",
       des: "Best for businesses with advanced features.",
       price: "$59/month",
       btnTxt: "Register Now",
-      imgSrc: "/assets/3.svg", // You can add this image too if available
+      imgSrc: "/assets/3.svg", // Ensure this image exists or remove
     },
   ];
 
