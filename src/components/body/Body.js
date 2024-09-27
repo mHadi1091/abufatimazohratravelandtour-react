@@ -164,3 +164,4 @@ const Body = () => {
 };
 
 export default Body;
+// payment sections and paymentcards are commented out !!!
