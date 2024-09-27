@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // import Modal from "../../Modal";
 import "./body.css";
-import PaymentSection from "../../sections/PaymentSection";
+// import PaymentSection from "../../sections/PaymentSection";
 import AboutUs from "../../sections/AboutUs";
 import TransportSection from "../../components/table/TransportSection";
 import { Stack, Box, Zoom } from "@mui/material";
@@ -11,10 +11,12 @@ import ContactUs from "../../sections/ContactUs";
 import HeroSlider from "../images slider/ImageSlider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import OffersCards from "../../sections/OfferCards";
 
 const Body = () => {
   const [showModal, setShowModal] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
+  const bookingRef = useRef(null); // Reference to the booking section
 
   useEffect(() => {
     // Show the modal after 3 seconds
@@ -65,6 +67,11 @@ const Body = () => {
       observer.disconnect(); // Cleanup observer on unmount
     };
   }, []);
+  const scrollToBooking = () => {
+    if (bookingRef.current) {
+      bookingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -115,7 +122,8 @@ const Body = () => {
           timeout={{ enter: 800, exit: 300 }}
         >
           <Box id="payment">
-            <PaymentSection />
+            <OffersCards scrollToBooking={scrollToBooking} />{" "}
+            {/* Pass scrollToBooking */}
           </Box>
         </Zoom>
         <Zoom
@@ -130,7 +138,9 @@ const Body = () => {
           in={visibleSections["booking"]}
           timeout={{ enter: 800, exit: 300 }}
         >
-          <Box id="booking">
+          <Box id="booking" ref={bookingRef}>
+            {" "}
+            {/* Set the ref to the booking section */}
             <Bookingform />
           </Box>
         </Zoom>
